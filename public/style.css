@@ -1,0 +1,134 @@
+body {
+  background-color: bisque;
+  display: block;
+  align-content: center;
+  font-family: sans-serif;
+}
+
+input,
+button {
+  /* appearance: none; */
+  border: none;
+  outline: none;
+  background: none;
+}
+.task {
+  flex: 1 1 0%;
+  margin: auto;
+  font-size: medium;
+  width: 300px;
+  height: 30px;
+  border: 2px #332cd3 solid;
+  border-radius: 1em;
+  color: #332cd3;
+  padding: 15px 15px;
+  overflow-x: auto;
+}
+#save {
+  flex: 1 1 0%;
+  margin: auto;
+  font-size: medium;
+  width: 300px;
+  height: 10px;
+  color: #332cd3;
+  padding: 15px 10px;
+  overflow-x: auto;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+#task:active {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+#submit-tasks {
+  margin: auto;
+  width: 100px;
+  height: 35px;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #332cd3;
+  border-radius: 1em;
+  color: #332cd3;
+  font-size: medium;
+  cursor: pointer;
+}
+#submit-tasks:active {
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.5);
+}
+#submit-tasks:hover {
+  background-color: #fafeab;
+}
+.container {
+  margin: auto;
+  width: 500px;
+  height: auto;
+  text-align: center;
+  background-color: aliceblue;
+  padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 3px solid #332cd3;
+  border-radius: 2em;
+}
+
+.task-container {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  margin-left: 0;
+  padding: 10px;
+  width: 400px;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #000;
+  border-radius: 1em;
+  align-items: center;
+}
+.task-container-save {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-left: 0;
+  padding-top: 10px;
+  width: 420px;
+  height: 30px;
+  background-color: rgb(255, 130, 130);
+  border: 2px solid #000;
+  border-radius: 1em;
+  align-items: center;
+}
+
+#save-button {
+  font-size: medium;
+  margin-top: 5px;
+}
+/* #focus-edit {
+  background-color: rgb(255, 125, 125);
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  background-color: aliceblue;
+  padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 3px solid #332cd3;
+  border-radius: 2em;
+} */
+.buttons {
+  display: flex;
+}
+.a-tags {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.a-tags:hover {
+  color: red;
+}
+.save-field {
+  display: flex;
+  justify-content: space-between;
+}

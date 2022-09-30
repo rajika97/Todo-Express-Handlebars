@@ -1,0 +1,72 @@
+<div class="container">
+  <h1>Todo App</h1>
+  <form action="/api/tasks" method="POST" class="new-task-form">
+    <div class="input-field">
+      <input type="text" name="task" id="task" class="task" />
+      <input
+        type="submit"
+        value="Add Task"
+        id="submit-tasks"
+        placeholder="What's need to be done?"
+      />
+    </div>
+  </form>
+  <h4>{{title}}</h4>
+  <ul>
+    {{#each tasks}}
+      {{#if this.selected}}
+        <dev class="task-container-save" id="focus-edit">
+
+          <form
+            id="myform{{this.id}}"
+            method="post"
+            action="/api/save/{{this.id}}"
+          ><div class="save-field">
+              <div class="save-feild-input">
+                <input
+                  type="text"
+                  name="save"
+                  id="save"
+                  class="save"
+                  value="{{this.text}}"
+                /></div>
+              <div class="save-field-submit">
+                <input
+                  type="submit"
+                  value="Save"
+                  class="a-tags"
+                  id="save-button"
+                />
+              </div>
+            </div>
+          </form>
+
+        </dev>
+      {{else}}
+        <dev class="task-container">
+          <li>{{this.text}}</li>
+          <div class="buttons">
+            <form
+              id="myform{{this.id}}"
+              method="post"
+              action="/api/edit/{{this.id}}"
+            ></form>
+            <a
+              onclick="document.getElementById('myform{{this.id}}').submit();"
+              class="a-tags"
+            >Edit</a>
+            <form
+              id="myDform{{this.id}}"
+              method="post"
+              action="/api/delete/{{this.id}}"
+            ></form>
+            <a
+              onclick="document.getElementById('myDform{{this.id}}').submit();"
+              class="a-tags"
+            >Delete</a>
+          </div>
+        </dev>
+      {{/if}}
+    {{/each}}
+  </ul>
+</div>
